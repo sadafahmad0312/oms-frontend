@@ -14,31 +14,33 @@ fullName, Age, text(Extracted)
     /src/components/upload/UploadForm          Display Component: format and display parsed results
     /src/context/UploadContext.ts              Shared app state : handles API call to backend , stores uploaded results
     /src/lib/api.ts                             Handles raw axios logic
+    /src/lib/apiUrl.ts                          Contains api config
     /src/providers                               Contain providers ex- Taost Providers
 
 ```
 
-##RUN Locally
-npm install
-npm run dev
+# RUN Locally
+1. npm install
+2. npm run dev
 
 
-#Tools And Stack
+# Tools And Stack
 1. Next js 15+ 
 2. React
 3. TAilwind CSS
 4. Typescript
 5. axios
 
-#Best Practices Followed
-Modular component organization
-Centralized API layer
-App router for clean routing
-context to manage shared state
+# Best Practices Followed
+1. Modular component organization
+2. Centralized API layer
+3. App router for clean routing
+4. context to manage shared state
 
-##Optional Enhancements
+# Optional Enhancements
 1. Testing
+2. Docker
 
-#License: MIT
+# License: MIT
 
-#Author: Sadaf Ahmad
+# Author: Sadaf Ahmad
