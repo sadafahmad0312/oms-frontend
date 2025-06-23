@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# user-detail-frontend-app
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A frontend built with next js and react that allow user to upload user details such as "FirstName", "lastName", "DOB" and image/pdf file and see the processed details like
+fullName, Age, text(Extracted)
 ```
+##Architectural Summary(Nextjs+App Router+React)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Layer                           Responsibility
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    /src/app/layout.tsx                        Global layout, wraps Header , footer, providers 
+    /src/app/upload/page.tsx                   Upload Page: UI page for Form Submission
+    src/app/display/page.tsx                   Display Page: UI page to show uploaded result
+    /src/components/upload/UploadForm          Form Component:  Accepts file + user data and call context function
+    /src/components/upload/UploadForm          Display Component: format and display parsed results
+    /src/context/UploadContext.ts              Shared app state : handles API call to backend , stores uploaded results
+    /src/lib/api.ts                             Handles raw axios logic
+    /src/providers                               Contain providers ex- Taost Providers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```
+##RUN Locally
+npm install
+npm run dev
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+#Tools And Stack
+1. Next js 15+ 
+2. React
+3. TAilwind CSS
+4. Typescript
+5. axios
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#Best Practices Followed
+Modular component organization
+Centralized API layer
+App router for clean routing
+context to manage shared state
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##Optional Enhancements
+1. Testing
 
-## Deploy on Vercel
+#License: MIT
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#Author: Sadaf Ahmad
