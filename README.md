@@ -16,7 +16,8 @@ fullName, Age, text(Extracted)
     /src/lib/api.ts                             Handles raw axios logic
     /src/providers                               Contain providers ex- Taost Providers
 
-    ```
+```
+
 ##RUN Locally
 npm install
 npm run dev
