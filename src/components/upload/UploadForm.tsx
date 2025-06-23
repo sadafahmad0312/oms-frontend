@@ -22,7 +22,6 @@ export default function UploadForm(){
     const { loading, error, submitUserDetails} = useUploadContext() //Destructures the context value from UploadContext
 
     //validate file logic
-
     const validateFiles = (file: File)=>{
       if(file.size> MAX_FILE_SIZE)
       {
@@ -84,16 +83,10 @@ export default function UploadForm(){
         }catch(error: any){
             toast.error('Error uploading users', error);
         }
-
-
-
-
     }
 
     return(
         <div>
-           
-
             <form onSubmit={handleSubmit}  className="mx-auto max-w-md  p-6 mt-4 bg-white rounded-2xl shadow-md  ">
             <h1 className="text-2xl font-[itim] font-boldtext-center text-gray-800 text-center  ">Upload Form</h1>
                 <div className="max-w-2xl flex flex-col mx-auto justify-between gap-5  ">

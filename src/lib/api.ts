@@ -2,10 +2,6 @@ import axios from 'axios'
 import {EndpointConfig} from './apiUrl';
 
 
-
-
-
-
 //api calling to backend
 export async function uploadUserDetails(formData: FormData)
 

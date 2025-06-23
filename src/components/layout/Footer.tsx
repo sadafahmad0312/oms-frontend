@@ -1,4 +1,6 @@
 'use client'
+
+//This is Footer layout
 import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa'; // Icons from react-icons
 export const Footer = () => {
     return (

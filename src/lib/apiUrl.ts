@@ -1,6 +1,6 @@
 export const EndpointConfig = {
     //  instaFeed: '/insta_feed_service/feed'
-    baseUrl: 'http://localhost:5000',
+    baseUrl: 'http://localhost:4000',
      upload: '/api/upload',
      
     };
